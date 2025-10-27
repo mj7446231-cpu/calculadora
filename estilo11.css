@@ -1,0 +1,133 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+font-family: Arial;
+margin: 10px;
+background-color: rgb(235, 232, 232);
+display: flex;
+min-height: 100vh;
+justify-content: center;
+padding: 50px;
+align-items: center;
+}
+
+.calculadora{
+    background-color: rgba(190, 175, 175, 0.705);
+    border-radius: 20px;
+   max-width: 320px;
+    margin-top:15px;
+    justify-content: center;
+    box-shadow: 0 10px 15px  rgb(36, 34, 34);
+    width: 100%;
+    padding: 20px;
+}
+
+.pantalla {
+background-color: rgba(150, 140, 140, 0.829);
+color: aliceblue;
+font-size: 28px;
+font-weight: bold;
+text-align: right;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 10px;
+min-height: 85px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+word-wrap: break-all;
+overflow: hidden;
+word-break: break-all;
+
+
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+.boton {
+    background-color: rgba(151, 139, 139, 0.87);
+    color: rgb(255, 253, 253);
+    border: 2px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 500px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3;
+
+}
+.boton:hover {
+    transform: scale(1);
+
+}
+
+
+.boton:active{
+    transform: scale(0.95);
+
+
+}
+
+.boton-operador{
+    background-color: rgba(7, 151, 151, 0.842);
+}
+
+.boton-operador:hover{
+    background-color: rgba(4, 120, 124, 0.856);
+
+}
+
+.boton-especial{
+    background-color: rgba(43, 83, 83, 0.884);
+}
+
+.boton-cero{
+    grid-column: span 1;
+}
+
+@keyframes pulsar{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.95);
+
+    }
+    100%{
+        transform: scale(1);
+
+    }
+}
+
+.pulsar {
+    animation: pulsar 0.19 ease-in-out;
+}
+
+@media (max-width: 400px){
+    .calculadora {
+        padding: 15px;
+
+    }
+
+
+    .boton {
+        padding: 15px;
+        font-size: 10px;
+    }
+    .pantalla{ 
+        font-size: 25px;
+
+        padding: 15px;
+
+        min-height: 60px;
+    }
+}
